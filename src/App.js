@@ -1,23 +1,19 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
 
-function Helloworld (){
-  return (
-    <div id="hello" >Hello World</div>
-  )
+function Helloworld(props) {
+  const { message } = props;
+  return <div id="hello">Hello {message} </div>;
 }
 
-//const  App = () => <div>This ismy component: <Helloworld/></div>
-/*
-class App extends React.Component {
-  render(){
-    return <div>This is my Component: <Helloworld/></div>
-  }
-}
-*/
 function App() {
   return (
-   <div>This is my component: <Helloworld/><Helloworld/></div>
+    <div>
+      This is my component:
+      <Helloworld message="PrimetText" />
+      <Helloworld message="SegundoText" />
+      <Helloworld message="TercerText" />
+    </div>
   );
 }
 
