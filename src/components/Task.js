@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import './Task.css'
+import PropTypes from 'prop-types'
 class Task extends Component {
 
   StyleCompleted(done){
-    console.log(done)
     return {
       fontSize:'20px',
       color: done ? 'gray' : 'black',
@@ -27,6 +27,10 @@ class Task extends Component {
       </p>
     );
   }
+}
+
+Task.propTypes = {
+  task: PropTypes.object.isRequired
 }
 
 
